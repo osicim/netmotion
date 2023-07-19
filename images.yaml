@@ -1,0 +1,19 @@
+ICX6450:
+ filename: ICX64S08030r.bin
+ boot: kxz10105.bin
+ size: 8556328
+ hash: 31996867abbec719db2b9194ee914337
+ path: brocade
+ 
+ICX6650:
+ filename: ICXR08010m.bin
+ boot: fxz10101.bin
+ size: 10620491
+ hash: 8f5dce2e2fda62b0bd4e30c169ba0154
+ path: brocade
+
+C2960X:
+ filename: ICX64S08030111r.bin
+ size: 8556328
+ hash: 31996867abbec719db2b9194ee914337
+ path: cisco

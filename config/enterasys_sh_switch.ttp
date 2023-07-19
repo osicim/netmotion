@@ -1,0 +1,8 @@
+<vars>
+STATUS = '\S+.*'
+EXCL = 'Not'
+</vars>
+
+<group>
+{{ switch_id | DIGIT }} {{ mgmt_status | re("STATUS") }} {{ model_id2 }} {{ model_id | notequal('EXCL') }} {{ switch_status }} {{ firmware_version }}
+</group>

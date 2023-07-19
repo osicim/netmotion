@@ -1,0 +1,52 @@
+credentials:
+ username: ""
+ password: ""
+ enablepass: ""
+
+server-config:
+ configuration_directory: config
+ logging_dir: log
+ devices_list: device-list.cfg
+ 
+run:
+ ## True or False
+ ## Firmware update and configuration cannot be done at the same time.
+ do_config: True
+ config_backup: False
+ update_firmware: False
+ 
+command-files:
+ brocade_cmd_file: brocade_show.cfg
+ brocade_cfg_file: brocade.cfg
+ cisco_cmd_file: cisco_show.cfg
+ cisco_cfg_file: cisco.cfg
+ hpe_2510_cmd_file: hpe_2510_show.cfg
+ hpe_2510_cfg_file: hpe_2510.cfg
+ hpe_aruba_cmd_file: hpe_aruba_show.cfg
+ hpe_aruba_cfg_file: hpe_aruba.cfg
+ 
+inventory-files:
+ switch_inventory_file: switch_inventory.cfg
+ 
+thread-pools:
+ num_threads: 10 
+ max_queue: 20
+ 
+tftp:
+ tftp_server: 10.255.255.10
+ tftp_config_dir: /tftp/images
+
+reload_times:
+ # time1 < time < time2 reload_at_noon or time3 < time < time4 reload_at_evening or otherwise reload now 
+ time1: "08:00:00"
+ time2: "12:00:00"
+ time3: "13:00:00"
+ time4: "20:00:00"
+ reload_at_noon: "12:30:00"
+ reload_at_evening: "20:01:00" 
+
+log:
+ err_log: netmotion_debug.log
+
+ttp:
+ enterasys_sh_switch: enterasys_sh_switch.ttp
